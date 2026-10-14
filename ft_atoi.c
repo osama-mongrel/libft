@@ -6,7 +6,7 @@
 /*   By: oben-el <oben-el@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 20:41:33 by oben-el           #+#    #+#             */
-/*   Updated: 2026/10/12 20:49:50 by oben-el          ###   ########.fr       */
+/*   Updated: 2026/10/14 19:56:21 by oben-el          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_atoi(const char *str)
 {
-	int	n;
-	int	i;
-	int	sign;
+	unsigned long int	n;
+	int					i;
+	int					sign;
 
 	i = 0;
 	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
@@ -32,4 +32,10 @@ int	ft_atoi(const char *str)
 	while (str[i] >= '0' && str[i] <= '9')
 		n = n * 10 + (str[i++] - '0');
 	return (sign * n);
+}
+
+int	main(int ac, char **av)
+{
+	(void)ac;
+	printf("%d\t%d\n", ft_atoi(av[1]), atoi(av[1]));
 }

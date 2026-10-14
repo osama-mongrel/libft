@@ -6,7 +6,7 @@
 /*   By: oben-el <oben-el@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/14 10:35:48 by oben-el           #+#    #+#             */
-/*   Updated: 2026/10/14 10:44:46 by oben-el          ###   ########.fr       */
+/*   Updated: 2026/10/14 19:44:22 by oben-el          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,3 +23,14 @@ t_list	*ft_lstnew(void *content)
 	new->next = NULL;
 	return (new);
 }
+/*
+int	main()
+{
+	char s[] = "new node";
+	t_list	new_node = *(ft_lstnew(s));
+	printf("%p\n", new_node.next);
+	printf("%p\n", &new_node);
+	printf("%s\n", new_node.content);
+	free(&new_node);
+}
+*/
