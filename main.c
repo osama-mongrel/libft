@@ -1,11 +1,10 @@
 #include <stdio.h>
 #include "libft.h"
 
-int	main()
+int	main(int ac, char **av)
 {
-	printf("%s\n", ft_itoa(-981));
-	printf("%s\n", ft_itoa(0));
-	printf("%s\n", ft_itoa(-0));
-	printf("%s\n", ft_itoa(INT_MIN));
-	printf("%s\n", ft_itoa(INT_MAX));
+	(void)ac;
+	int	fd = open("test.txt", O_WRONLY);
+	ft_putnbr_fd(atoi(av[1]), fd);
+	close(fd);
 }

@@ -6,7 +6,7 @@
 /*   By: oben-el <oben-el@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 07:59:31 by oben-el           #+#    #+#             */
-/*   Updated: 2026/10/13 08:08:54 by oben-el          ###   ########.fr       */
+/*   Updated: 2026/10/14 12:10:22 by oben-el          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 	while (s1[i] && ft_strchr(set, s1[i]))
 		i++;
 	start = i;
+	if (start == ft_strlen(s1))
+		start = 0;
 	i = ft_strlen(s1);
-	while (s1[i - 1] && ft_strchr(set, s1[i - 1]))
+	while (i > 0 && s1[i - 1] && ft_strchr(set, s1[i - 1]))
 		i--;
 	end = i;
 	size = end - start + 1;
