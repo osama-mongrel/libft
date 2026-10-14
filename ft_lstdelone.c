@@ -6,7 +6,7 @@
 /*   By: oben-el <oben-el@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/14 11:50:12 by oben-el           #+#    #+#             */
-/*   Updated: 2026/10/14 12:01:06 by oben-el          ###   ########.fr       */
+/*   Updated: 2026/10/14 17:13:05 by oben-el          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
+	if (lst == NULL)
+		return ;
 	del(lst->content);
 	free(lst);
 }
