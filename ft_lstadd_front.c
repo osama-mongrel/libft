@@ -6,7 +6,7 @@
 /*   By: oben-el <oben-el@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/14 10:40:47 by oben-el           #+#    #+#             */
-/*   Updated: 2026/10/14 19:45:26 by oben-el          ###   ########.fr       */
+/*   Updated: 2026/10/15 09:12:07 by oben-el          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 	*lst = new;
 	new->next = tmp;
 }
-
+/*
 int	main()
 {
 	t_list *lst, *curr;
@@ -39,3 +39,4 @@ int	main()
 	}
 	
 }
+*/

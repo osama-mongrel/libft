@@ -6,7 +6,7 @@
 /*   By: oben-el <oben-el@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 11:09:40 by oben-el           #+#    #+#             */
-/*   Updated: 2026/10/12 11:09:43 by oben-el          ###   ########.fr       */
+/*   Updated: 2026/10/15 11:22:26 by oben-el          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,3 +18,10 @@ int	ft_isdigit(int c)
 		return (1);
 	return (0);
 }
+/*
+int	main(int ac, char **av)
+{
+	(void)ac;
+	printf("%d\n", ft_isdigit(av[1][0]));
+}
+*/
