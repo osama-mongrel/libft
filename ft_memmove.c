@@ -6,7 +6,7 @@
 /*   By: oben-el <oben-el@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 17:42:30 by oben-el           #+#    #+#             */
-/*   Updated: 2026/10/12 20:00:05 by oben-el          ###   ########.fr       */
+/*   Updated: 2026/10/15 18:46:54 by oben-el          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,19 +19,28 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 
 	a = (unsigned char *)dst;
 	b = (unsigned char *)src;
-	if (a < b)
+	if (a > b)
 	{
 		while (len--)
 			a[len] = b[len];
 	}
 	else
 	{
-		while (len--)
-		{
-			a = b;
-			a++;
-			b++;
-		}
+		ft_memcpy(dst, src, len);
 	}
 	return (dst);
 }
+/*
+int	main()
+{
+	char *src = ft_strdup("Hello");
+	char *dest = src + 1;
+
+	if (src != NULL && dest != NULL)
+	{
+		ft_memmove(dest, src, 4);
+	}
+	printf("%s\n", dest);
+	printf("%s\n", src);
+}
+*/

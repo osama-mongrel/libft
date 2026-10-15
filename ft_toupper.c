@@ -6,7 +6,7 @@
 /*   By: oben-el <oben-el@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 18:54:28 by oben-el           #+#    #+#             */
-/*   Updated: 2026/10/12 18:56:28 by oben-el          ###   ########.fr       */
+/*   Updated: 2026/10/15 17:11:06 by oben-el          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,3 +18,17 @@ int	ft_toupper(int c)
 		return (c + ('A' - 'a'));
 	return (c);
 }
+/*
+int	main()
+{
+	char *s = ft_strdup("Hello");
+
+	int i = 0;
+	while (s[i])
+	{
+		s[i] = ft_toupper(s[i]);
+		i++;
+	}
+	printf("%s\n", s);
+}
+*/

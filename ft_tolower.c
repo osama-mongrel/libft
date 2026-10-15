@@ -6,13 +6,29 @@
 /*   By: oben-el <oben-el@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 18:56:34 by oben-el           #+#    #+#             */
-/*   Updated: 2026/10/12 18:57:20 by oben-el          ###   ########.fr       */
+/*   Updated: 2026/10/15 17:14:42 by oben-el          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
-		return (c + ('A' - 'a'));
+		return (c + ('a' - 'A'));
 	return (c);
 }
+/*
+int	main()
+{
+	char *s = ft_strdup("Hello");
+
+	int i = 0;
+	while (s[i])
+	{
+		s[i] = ft_tolower(s[i]);
+		i++;
+	}
+	printf("%s\n", s);
+}
+*/

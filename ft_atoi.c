@@ -6,17 +6,37 @@
 /*   By: oben-el <oben-el@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 20:41:33 by oben-el           #+#    #+#             */
-/*   Updated: 2026/10/14 19:56:21 by oben-el          ###   ########.fr       */
+/*   Updated: 2026/10/15 19:51:51 by oben-el          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static int	ft_atoi_helper(const char *str, int sign)
+{
+	unsigned long	n;
+	unsigned int	d;
+	int				i;
+
+	i = 0;
+	n = 0;
+	while (ft_isdigit(str[i]))
+	{
+		d = str[i] - '0';
+		if (n * 10 + d > LONG_MAX && sign == 1)
+			return (-1);
+		else if (n * 10 + d - 1 > LONG_MAX && sign == -1)
+			return (0);
+		n = n * 10 + d;
+		i++;
+	}
+	return (sign * n);
+}
+
 int	ft_atoi(const char *str)
 {
-	unsigned long int	n;
-	int					i;
-	int					sign;
+	int				i;
+	int				sign;
 
 	i = 0;
 	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
@@ -28,10 +48,7 @@ int	ft_atoi(const char *str)
 			sign = -1;
 		i++;
 	}
-	n = 0;
-	while (str[i] >= '0' && str[i] <= '9')
-		n = n * 10 + (str[i++] - '0');
-	return (sign * n);
+	return (ft_atoi_helper((char *)str + i, sign));
 }
 
 int	main(int ac, char **av)

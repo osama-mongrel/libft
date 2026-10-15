@@ -6,7 +6,7 @@
 /*   By: oben-el <oben-el@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 19:46:50 by oben-el           #+#    #+#             */
-/*   Updated: 2026/10/12 20:00:46 by oben-el          ###   ########.fr       */
+/*   Updated: 2026/10/15 17:23:48 by oben-el          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,24 @@
 char	*ft_strchr(const char *s, int c)
 {
 	int		i;
-	char	ch;
-	char	*str;
 
-	ch = c;
-	str = (char *)s;
 	i = 0;
-	while (str[i])
+	while (s[i])
 	{
-		if (str[i] == ch)
-			return (&str[i]);
+		if (s[i] == c)
+			return ((char *)(s + i));
 		i++;
 	}
+	if (c == 0)
+		return ((char *)(s + i));
 	return (NULL);
 }
+/*
+int main()
+{
+	char *s = ft_strdup("Campion");
+
+	char *c = ft_strchr(s, 'i');
+	printf("%s\n", c);
+}
+*/
