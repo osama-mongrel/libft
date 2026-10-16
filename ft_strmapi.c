@@ -6,7 +6,7 @@
 /*   By: oben-el <oben-el@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 18:29:13 by oben-el           #+#    #+#             */
-/*   Updated: 2026/10/13 18:41:10 by oben-el          ###   ########.fr       */
+/*   Updated: 2026/10/16 16:17:49 by oben-el          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,3 +30,19 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	}
 	return (str);
 }
+/*
+char	plusthus(unsigned int i, char c)
+{
+	return (1 + c);
+}
+
+int main()
+{
+	char *s = ft_strdup("Hello, Campion");
+
+	char *str = ft_strmapi(s, plusthus);
+	printf("%s\n", str);
+	free(s);
+	free(str);
+}
+*/

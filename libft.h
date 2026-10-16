@@ -6,7 +6,7 @@
 /*   By: oben-el <oben-el@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 11:10:20 by oben-el           #+#    #+#             */
-/*   Updated: 2026/10/16 08:30:12 by oben-el          ###   ########.fr       */
+/*   Updated: 2026/10/16 15:04:55 by oben-el          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 # include <fcntl.h>
 # include <stdio.h>
 # include <strings.h>
+# include <ctype.h>
 
 /* Part I	*/
 int				ft_isalpha(int c);
