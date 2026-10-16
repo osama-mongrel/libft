@@ -6,7 +6,7 @@
 /*   By: oben-el <oben-el@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 07:59:31 by oben-el           #+#    #+#             */
-/*   Updated: 2026/10/14 12:10:22 by oben-el          ###   ########.fr       */
+/*   Updated: 2026/10/16 09:17:33 by oben-el          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char			*str;
-	size_t			size;
+	size_t			len;
 	unsigned int	start;
 	unsigned int	end;
 	unsigned int	i;
@@ -24,16 +24,27 @@ char	*ft_strtrim(char const *s1, char const *set)
 	while (s1[i] && ft_strchr(set, s1[i]))
 		i++;
 	start = i;
-	if (start == ft_strlen(s1))
+	len = ft_strlen(s1);
+	if (start == len)
 		start = 0;
-	i = ft_strlen(s1);
+	i = len;
 	while (i > 0 && s1[i - 1] && ft_strchr(set, s1[i - 1]))
 		i--;
 	end = i;
-	size = end - start + 1;
-	str = (char *)malloc(size * sizeof(char));
-	if (!str)
-		return (NULL);
-	ft_strlcpy(str, s1 + start, size);
+	len = end - start;
+	str = ft_substr(s1, start, len);
 	return (str);
 }
+/*
+int main()
+{
+	char *s = ft_strdup("   \t Hello, world!  \t   ");
+	char *set = ft_strdup(" \t");
+
+	char *strim = ft_strtrim(s, set);
+	printf("%s\n", strim);
+	free(s);
+	free(set);
+	free(strim);
+}
+*/

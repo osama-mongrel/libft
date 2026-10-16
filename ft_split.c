@@ -6,18 +6,17 @@
 /*   By: oben-el <oben-el@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 08:10:10 by oben-el           #+#    #+#             */
-/*   Updated: 2026/10/13 12:10:14 by oben-el          ###   ########.fr       */
+/*   Updated: 2026/10/16 09:48:37 by oben-el          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	**alloc_ptrs_arr(char const *s, char c)
+static unsigned int	substrs_count(char const *s, char c)
 {
 	unsigned int	count;
 	unsigned int	i;
 	unsigned int	mark;
-	char			**strs;
 
 	i = 0;
 	count = 0;
@@ -31,24 +30,7 @@ static char	**alloc_ptrs_arr(char const *s, char c)
 		if (i > mark)
 			count++;
 	}
-	strs = (char **)malloc((count + 1) * sizeof(char *));
-	if (!strs)
-		return (NULL);
-	strs[count] = NULL;
-	return (strs);
-}
-
-static int	cpy_str(char **strs, char const *s, \
-		unsigned int start, unsigned int end)
-{
-	unsigned int	size;
-
-	size = end - start + 1;
-	*strs = (char *)malloc(size * sizeof(char));
-	if (!(*strs))
-		return (0);
-	ft_strlcpy(*strs, s + start, size);
-	return (1);
+	return (count);
 }
 
 static void	free_strs(char **strs, unsigned int count)
@@ -58,7 +40,7 @@ static void	free_strs(char **strs, unsigned int count)
 	free(strs);
 }
 
-static int	cpy_substrs(char const *s, char c, char **strs)
+static void	substrs_cpy(char const *s, char c, char **strs)
 {
 	unsigned int	count;
 	unsigned int	i;
@@ -75,25 +57,40 @@ static int	cpy_substrs(char const *s, char c, char **strs)
 			i++;
 		if (i > mark)
 		{
-			if (!cpy_str(&strs[count], s, mark, i))
+			strs[count] = ft_substr(s, mark, i - mark);
+			if (strs[count] == NULL)
 			{
 				free_strs(strs, count);
-				return (-1);
+				strs = NULL;
+				break;
 			}
 			count++;
 		}
 	}
-	return (1);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	char	**strs;
+	char			**strs;
+	unsigned int	count;
+	unsigned int	i;
 
-	strs = alloc_ptrs_arr(s, c);
-	if (!strs)
+	count = substrs_count(s, c);
+	strs = (char **)malloc((count + 1) * sizeof(char *));
+	if (strs == NULL)
 		return (strs);
-	if (cpy_substrs(s, c, strs) == -1)
-		return (NULL);
+	strs[count] = NULL;
+	substrs_cpy(s, c, strs);
 	return (strs);
+}
+
+int	main()
+{
+	char *s = ft_strdup("hello there campion");
+
+	char **strs = ft_split(s, ' ');
+	int i = 0;
+	while (strs[i])
+		printf("%s\n", strs[i++]);
+	free(s);
 }

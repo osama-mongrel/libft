@@ -6,7 +6,7 @@
 /*   By: oben-el <oben-el@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 17:57:22 by oben-el           #+#    #+#             */
-/*   Updated: 2026/10/15 17:00:35 by oben-el          ###   ########.fr       */
+/*   Updated: 2026/10/16 08:18:04 by oben-el          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,7 @@ int	main()
 	size_t	len = ft_strlcpy(dst, src, 5);
 	printf("%d\n", (int)len);
 	printf("%s\n", dst);
+	free(src);
+	free(dst);
 }
 */

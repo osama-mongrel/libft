@@ -6,7 +6,7 @@
 /*   By: oben-el <oben-el@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 20:19:03 by oben-el           #+#    #+#             */
-/*   Updated: 2026/10/15 18:35:25 by oben-el          ###   ########.fr       */
+/*   Updated: 2026/10/16 08:16:04 by oben-el          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,7 @@ int	main()
 	int are_same1 = memcmp(s1, s2, 8);
 	printf("%d\n", are_same);
 	printf("%d\n", are_same1);
+	free(s1);
+	free(s2);
 }
 */

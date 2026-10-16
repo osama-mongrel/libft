@@ -6,7 +6,7 @@
 /*   By: oben-el <oben-el@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 20:25:20 by oben-el           #+#    #+#             */
-/*   Updated: 2026/10/15 18:46:01 by oben-el          ###   ########.fr       */
+/*   Updated: 2026/10/16 08:15:44 by oben-el          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,8 @@ int main()
 
 	char *n = ft_strnstr(haystack, needle, 10);
 	printf("%s\n", n);
+	free(haystack);
+	free(needle);
+	free(n);
 }
 */
