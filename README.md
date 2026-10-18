@@ -2,7 +2,7 @@
 
 # Libft
 
-This project aim is to code some general purpose C functions (see below), which are then compiled into a library to use in future projects.
+This project aim is to re-implement some general purpose C functions (see below), which are then compiled into a library to use in future projects.
 
 ## Description
 
