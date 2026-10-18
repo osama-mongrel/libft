@@ -64,4 +64,11 @@ This project aim is to code some general purpose C functions (see below), which 
 * [`ft_lstiter`](ft_lstiter.c) - apply function of content of all list's elements.
 * [`ft_lstmap`](ft_lstmap.c) - apply function to content of all list's elements into new list.
 
+## Instructions
+
+To use this library first you need to clone this repo:
+
+```
+git clone https://github.com/osama-mongrel/libft.git
+```
 
