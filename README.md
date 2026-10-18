@@ -69,6 +69,6 @@ This project aim is to code some general purpose C functions (see below), which 
 To use this library first you need to clone this repo:
 
 ```
-git clone https://github.com/osama-mongrel/libft.git
+    git clone https://github.com/osama-mongrel/libft.git
 ```
 
