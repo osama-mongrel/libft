@@ -70,3 +70,32 @@ To use this library first you need to clone this repo:
 
     git clone https://github.com/osama-mongrel/libft.git
 
+Then compile it:
+
+    make
+
+To remove object files run:
+
+    make clean
+
+To remove all compiled files run:
+
+    make fclean
+
+To run all the previous commands in a single one run:
+
+    make re
+
+Finally to use this library in your project, make sure to include its header file:
+
+    #include "libft.h"
+
+And when compiling your project to add the necessary flags:
+
+    -Ipath/to/libft -Lpath/to/libft -lft
+
+## Resources
+
+For more information about the functions implemented in this project refer to their corresponding man pages if they have one.
+
+AI wasn't used in this projects.
