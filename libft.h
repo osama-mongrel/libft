@@ -6,7 +6,7 @@
 /*   By: oben-el <oben-el@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 11:10:20 by oben-el           #+#    #+#             */
-/*   Updated: 2026/10/16 15:04:55 by oben-el          ###   ########.fr       */
+/*   Updated: 2026/10/18 07:40:08 by oben-el          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,9 @@
 # define LIBFT_H
 
 # include <stddef.h>
-# include <stdlib.h>
 # include <limits.h>
+# include <stdlib.h>
 # include <unistd.h>
-# include <fcntl.h>
-# include <stdio.h>
-# include <strings.h>
-# include <ctype.h>
 
 /* Part I	*/
 int				ft_isalpha(int c);
