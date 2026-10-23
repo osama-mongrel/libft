@@ -6,7 +6,7 @@
 /*   By: oben-el <oben-el@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 07:39:07 by oben-el           #+#    #+#             */
-/*   Updated: 2026/10/16 08:14:48 by oben-el          ###   ########.fr       */
+/*   Updated: 2026/10/23 09:20:21 by oben-el          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,21 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char			*substr;
-	size_t			size;
+	char	*substr;
+	size_t	sublen;
+	size_t	slen;
 
-	size = ft_strlen(s + start);
-	if (size > len)
-		size = len;
-	substr = (char *)malloc((size + 1) * sizeof(char));
-	if (substr == NULL)
+	if (!s)
 		return (NULL);
-	ft_strlcpy(substr, s + start, size + 1);
+	slen = ft_strlen(s);
+	if (start > slen)
+		start = slen;
+	sublen = slen - start;
+	if (sublen > len)
+		sublen = len;
+	substr = (char *)malloc((sublen + 1) * sizeof(char));
+	if (!substr)
+		return (NULL);
+	ft_strlcpy(substr, s + start, sublen + 1);
 	return (substr);
 }
-/*
-int	main()
-{
-	char *s = ft_strdup("Hi there, Campion!");
-
-	char *sub = ft_substr(s, 10, 7);
-
-	printf("%s\n", sub);
-	free(s);
-	free(sub);
-}
-*/

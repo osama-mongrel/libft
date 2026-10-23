@@ -6,7 +6,7 @@
 /*   By: oben-el <oben-el@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 11:09:31 by oben-el           #+#    #+#             */
-/*   Updated: 2026/10/16 16:16:56 by oben-el          ###   ########.fr       */
+/*   Updated: 2026/10/22 07:57:48 by oben-el          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,3 @@ int	ft_isalpha(int c)
 		return (1);
 	return (0);
 }
-/*
-int	main(int ac, char **av)
-{
-	(void)ac;
-	printf("%d\t%d\n", ft_isalpha(atoi(av[1])), isalpha(atoi(av[1])));
-}
-*/

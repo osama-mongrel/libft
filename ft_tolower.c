@@ -6,7 +6,7 @@
 /*   By: oben-el <oben-el@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 18:56:34 by oben-el           #+#    #+#             */
-/*   Updated: 2026/10/16 08:17:24 by oben-el          ###   ########.fr       */
+/*   Updated: 2026/10/22 08:05:41 by oben-el          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,18 +18,3 @@ int	ft_tolower(int c)
 		return (c + ('a' - 'A'));
 	return (c);
 }
-/*
-int	main()
-{
-	char *s = ft_strdup("Hello");
-
-	int i = 0;
-	while (s[i])
-	{
-		s[i] = ft_tolower(s[i]);
-		i++;
-	}
-	printf("%s\n", s);
-	free(s);
-}
-*/

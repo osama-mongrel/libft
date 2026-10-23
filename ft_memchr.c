@@ -6,7 +6,7 @@
 /*   By: oben-el <oben-el@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 20:15:35 by oben-el           #+#    #+#             */
-/*   Updated: 2026/10/16 08:16:18 by oben-el          ###   ########.fr       */
+/*   Updated: 2026/10/22 08:12:42 by oben-el          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,14 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t			i;
 	unsigned char	*str;
 
 	str = (unsigned char *)s;
-	i = 0;
-	while (i < n)
+	while (n-- > 0)
 	{
-		if (str[i] == c)
-			return (str + i);
-		i++;
+		if (*str == c)
+			return (str);
+		str++;
 	}
 	return (NULL);
 }
-/*
-int	main()
-{
-	char *s = ft_strdup("Campion");
-
-	char *c = ft_memchr(s, 'i', 4);
-	printf("%s\n", c);
-	free(s);
-	free(c);
-}
-*/

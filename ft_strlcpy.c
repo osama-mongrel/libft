@@ -6,7 +6,7 @@
 /*   By: oben-el <oben-el@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 17:57:22 by oben-el           #+#    #+#             */
-/*   Updated: 2026/10/16 08:18:04 by oben-el          ###   ########.fr       */
+/*   Updated: 2026/10/22 08:03:51 by oben-el          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,16 +29,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	dst[i] = '\0';
 	return (src_len);
 }
-/*
-int	main()
-{
-	char *src = ft_strdup("Ca");
-	char *dst = (char *)malloc(5);
-
-	size_t	len = ft_strlcpy(dst, src, 5);
-	printf("%d\n", (int)len);
-	printf("%s\n", dst);
-	free(src);
-	free(dst);
-}
-*/

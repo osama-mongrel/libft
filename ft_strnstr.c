@@ -6,7 +6,7 @@
 /*   By: oben-el <oben-el@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 20:25:20 by oben-el           #+#    #+#             */
-/*   Updated: 2026/10/16 08:15:44 by oben-el          ###   ########.fr       */
+/*   Updated: 2026/10/22 08:28:22 by oben-el          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,16 +31,3 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (NULL);
 }
-/*
-int main()
-{
-	char *haystack = ft_strdup("Heater");
-	char *needle = ft_strdup("lit");
-
-	char *n = ft_strnstr(haystack, needle, 10);
-	printf("%s\n", n);
-	free(haystack);
-	free(needle);
-	free(n);
-}
-*/

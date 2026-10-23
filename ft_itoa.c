@@ -6,7 +6,7 @@
 /*   By: oben-el <oben-el@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 09:47:27 by oben-el           #+#    #+#             */
-/*   Updated: 2026/10/16 15:30:31 by oben-el          ###   ########.fr       */
+/*   Updated: 2026/10/23 09:17:18 by oben-el          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,9 +65,3 @@ char	*ft_itoa(int n)
 	ft_itoa_helper(n, len, nbr);
 	return (nbr);
 }
-/*
-int	main(int ac, char **av)
-{
-	printf("%s\n", ft_itoa(atoi(av[1])));
-}
-*/

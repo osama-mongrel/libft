@@ -6,7 +6,7 @@
 /*   By: oben-el <oben-el@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 08:10:10 by oben-el           #+#    #+#             */
-/*   Updated: 2026/10/16 14:51:20 by oben-el          ###   ########.fr       */
+/*   Updated: 2026/10/23 09:18:32 by oben-el          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ static void	substrs_cpy(char const *s, char c, char **strs)
 		if (i > mark)
 		{
 			strs[count] = ft_substr(s, mark, i - mark);
-			if (strs[count] == NULL)
+			if (!strs[count])
 			{
 				free_strs(strs, count);
 				strs = NULL;
@@ -74,23 +74,13 @@ char	**ft_split(char const *s, char c)
 	char			**strs;
 	unsigned int	count;
 
+	if (!s)
+		return (NULL);
 	count = substrs_count(s, c);
 	strs = (char **)malloc((count + 1) * sizeof(char *));
-	if (strs == NULL)
-		return (strs);
+	if (!strs)
+		return (NULL);
 	strs[count] = NULL;
 	substrs_cpy(s, c, strs);
 	return (strs);
 }
-/*
-int	main()
-{
-	char *s = ft_strdup("hello there campion, how are you?");
-
-	char **strs = ft_split(s, ' ');
-	int i = 0;
-	while (strs[i])
-		printf("%s\n", strs[i++]);
-	free(s);
-}
-*/

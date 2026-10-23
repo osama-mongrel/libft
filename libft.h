@@ -6,7 +6,7 @@
 /*   By: oben-el <oben-el@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 11:10:20 by oben-el           #+#    #+#             */
-/*   Updated: 2026/10/18 07:40:08 by oben-el          ###   ########.fr       */
+/*   Updated: 2026/10/22 09:36:45 by oben-el          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ char			*ft_strrchr(const char *s, int c);
 int				ft_strncmp(const char *s1, const char *s2, size_t n);
 void			*ft_memchr(const void *s, int c, size_t n);
 int				ft_memcmp(const void *s1, const void *s2, size_t n);
-char			*ft_strnstr(const char *haystack, const char *needle, \
+char			*ft_strnstr(const char *haystack, const char *needle,\
 		size_t len);
 int				ft_atoi(const char *str);
 void			*ft_calloc(size_t count, size_t size);
@@ -72,7 +72,7 @@ void			ft_lstadd_back(t_list **lst, t_list *new);
 void			ft_lstdelone(t_list *lst, void (*del)(void *));
 void			ft_lstclear(t_list **lst, void (*del)(void *));
 void			ft_lstiter(t_list *lst, void (*f)(void *));
-t_list			*ft_lstmap(t_list *lst, void *(*f)(void *), \
-		void (*del)(void *));
+t_list			*ft_lstmap(t_list *lst, void *(*f)(void *),\
+			void (*del)(void *));
 
 #endif

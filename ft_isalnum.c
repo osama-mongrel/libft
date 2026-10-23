@@ -6,7 +6,7 @@
 /*   By: oben-el <oben-el@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 11:09:20 by oben-el           #+#    #+#             */
-/*   Updated: 2026/10/15 11:24:37 by oben-el          ###   ########.fr       */
+/*   Updated: 2026/10/22 07:58:26 by oben-el          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,3 @@ int	ft_isalnum(int c)
 		return (1);
 	return (0);
 }
-/*
-int	main(int ac, char **av)
-{
-	(void)ac;
-	printf("%d\n", ft_isalnum(av[1][0]));
-}
-*/

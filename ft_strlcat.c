@@ -6,7 +6,7 @@
 /*   By: oben-el <oben-el@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 18:38:24 by oben-el           #+#    #+#             */
-/*   Updated: 2026/10/16 08:17:51 by oben-el          ###   ########.fr       */
+/*   Updated: 2026/10/22 08:05:10 by oben-el          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,17 +31,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dst[dst_len + i] = '\0';
 	return (src_len + dst_len);
 }
-/*
-int	main()
-{
-	char *src = ft_strdup("Campion");
-	char *dst = (char *)malloc(20);
-
-	ft_strlcpy(dst, "Hi, ", 20);
-	size_t len = ft_strlcat(dst, src, 20);
-	printf("%s\n", dst);
-	printf("%d\n", (int)len);
-	free(src);
-	free(dst);
-}
-*/

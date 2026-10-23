@@ -6,7 +6,7 @@
 /*   By: oben-el <oben-el@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 20:41:33 by oben-el           #+#    #+#             */
-/*   Updated: 2026/10/16 07:27:59 by oben-el          ###   ########.fr       */
+/*   Updated: 2026/10/23 09:02:12 by oben-el          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,9 @@ static int	ft_atoi_helper(const char *str, int sign)
 	{
 		d = str[i] - '0';
 		if (n * 10 + d > LONG_MAX && sign == 1)
-			return (-1);
-		else if (n * 10 + d - 1 > LONG_MAX && sign == -1)
-			return (0);
+			return ((int)LONG_MAX);
+		else if (n * 10 + d > LONG_MAX + 1 && sign == -1)
+			return ((int)LONG_MIN);
 		n = n * 10 + d;
 		i++;
 	}
@@ -50,10 +50,3 @@ int	ft_atoi(const char *str)
 	}
 	return (ft_atoi_helper((char *)str + i, sign));
 }
-/*
-int	main(int ac, char **av)
-{
-	(void)ac;
-	printf("%d\t%d\n", ft_atoi(av[1]), atoi(av[1]));
-}
-*/
