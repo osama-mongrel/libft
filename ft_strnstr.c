@@ -6,7 +6,7 @@
 /*   By: oben-el <oben-el@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 20:25:20 by oben-el           #+#    #+#             */
-/*   Updated: 2026/10/22 08:28:22 by oben-el          ###   ########.fr       */
+/*   Updated: 2026/10/24 09:42:09 by oben-el          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	if (!needle[0])
 		return ((char *)haystack);
 	i = 0;
-	while (haystack[i] && i < len)
+	while (i < len && haystack[i])
 	{
 		j = 0;
 		while (i + j < len && needle[j] && haystack[i + j] == needle[j])

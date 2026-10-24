@@ -6,7 +6,7 @@
 /*   By: oben-el <oben-el@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 07:39:07 by oben-el           #+#    #+#             */
-/*   Updated: 2026/10/23 09:20:21 by oben-el          ###   ########.fr       */
+/*   Updated: 2026/10/24 09:47:07 by oben-el          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	sublen;
 	size_t	slen;
 
-	if (!s)
+	if (!s || !len)
 		return (NULL);
 	slen = ft_strlen(s);
 	if (start > slen)

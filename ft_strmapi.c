@@ -6,7 +6,7 @@
 /*   By: oben-el <oben-el@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 18:29:13 by oben-el           #+#    #+#             */
-/*   Updated: 2026/10/23 09:15:35 by oben-el          ###   ########.fr       */
+/*   Updated: 2026/10/24 10:20:57 by oben-el          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	if (!s || !f)
 		return (NULL);
 	len = ft_strlen(s);
-	str = (char *)malloc((len + 1) * sizeof(char));
+	str = malloc((len + 1) * sizeof(char));
 	if (!str)
 		return (NULL);
 	i = 0;

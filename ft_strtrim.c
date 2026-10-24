@@ -6,7 +6,7 @@
 /*   By: oben-el <oben-el@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 07:59:31 by oben-el           #+#    #+#             */
-/*   Updated: 2026/10/23 09:19:14 by oben-el          ###   ########.fr       */
+/*   Updated: 2026/10/24 10:09:41 by oben-el          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,12 @@ char	*ft_strtrim(char const *s1, char const *set)
 	unsigned int	end;
 	unsigned int	i;
 
-	if (!s1 || !set)
+	if (!s1 && !set)
 		return (NULL);
+	if (!s1)
+		return (NULL);
+	if (!set)
+		return (ft_strdup(s1));
 	i = 0;
 	while (s1[i] && ft_strchr(set, s1[i]))
 		i++;

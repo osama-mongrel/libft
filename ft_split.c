@@ -6,7 +6,7 @@
 /*   By: oben-el <oben-el@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 08:10:10 by oben-el           #+#    #+#             */
-/*   Updated: 2026/10/23 09:18:32 by oben-el          ###   ########.fr       */
+/*   Updated: 2026/10/24 10:15:18 by oben-el          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ static unsigned int	substrs_count(char const *s, char c)
 {
 	unsigned int	count;
 	unsigned int	i;
-	unsigned int	mark;
 
 	i = 0;
 	count = 0;
@@ -24,11 +23,10 @@ static unsigned int	substrs_count(char const *s, char c)
 	{
 		while (s[i] && s[i] == c)
 			i++;
-		mark = i;
+		if (s[i] != c)
+			count++;
 		while (s[i] && s[i] != c)
 			i++;
-		if (i > mark)
-			count++;
 	}
 	return (count);
 }
@@ -77,7 +75,7 @@ char	**ft_split(char const *s, char c)
 	if (!s)
 		return (NULL);
 	count = substrs_count(s, c);
-	strs = (char **)malloc((count + 1) * sizeof(char *));
+	strs = malloc((count + 1) * sizeof(char *));
 	if (!strs)
 		return (NULL);
 	strs[count] = NULL;
